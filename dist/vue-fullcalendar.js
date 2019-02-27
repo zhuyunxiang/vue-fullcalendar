@@ -1,6 +1,6 @@
 /*!
  * vue-fullcalendar v1.0.9
- * (c) 2017 Sunny Wang <sunnywang0104@163.com> 
+ * (c) 2019 Sunny Wang <sunnywang0104@163.com> 
  * @license MIT
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -16,114 +16,105 @@
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	var _fullCalendar = __webpack_require__(1);
-
+	
 	var _fullCalendar2 = _interopRequireDefault(_fullCalendar);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	var fc = _fullCalendar2.default;
-
+	
 	module.exports = fc;
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-
+	
 	/* styles */
 	__webpack_require__(2)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(6)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(19)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/SunnyWang/code/vue-fullcalendar/src/fullCalendar.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-
+	
+	var Component = __webpack_require__(6)(
+	  /* script */
+	  __webpack_require__(7),
+	  /* template */
+	  __webpack_require__(20),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+	Component.options.__file = "/Users/zyx/Documents/develop/NODE/vue-fullcalendar/src/fullCalendar.vue"
+	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+	if (Component.options.functional) {console.error("[vue-loader] fullCalendar.vue: functional components are not supported with templates, they should use render functions.")}
+	
 	/* hot reload */
 	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-3e333dbe", __vue_options__)
+	    hotAPI.createRecord("data-v-0de35d15", Component.options)
 	  } else {
-	    hotAPI.reload("data-v-3e333dbe", __vue_options__)
+	    hotAPI.reload("data-v-0de35d15", Component.options)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] fullCalendar.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = Component.exports
 
-	module.exports = __vue_exports__
 
-
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-
+	
 	// load the styles
 	var content = __webpack_require__(3);
 	if(typeof content === 'string') content = [[module.id, content, '']];
@@ -134,8 +125,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js!./../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/style-rewriter.js?id=data-v-3e333dbe!./../node_modules/.npminstall/sass-loader/3.2.3/sass-loader/index.js!./../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/selector.js?type=styles&index=0!./fullCalendar.vue", function() {
-				var newContent = require("!!./../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js!./../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/style-rewriter.js?id=data-v-3e333dbe!./../node_modules/.npminstall/sass-loader/3.2.3/sass-loader/index.js!./../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/selector.js?type=styles&index=0!./fullCalendar.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0de35d15!../node_modules/sass-loader/index.js!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./fullCalendar.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0de35d15!../node_modules/sass-loader/index.js!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./fullCalendar.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -144,23 +135,23 @@ return /******/ (function(modules) { // webpackBootstrap
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
 	// imports
-
-
+	
+	
 	// module
 	exports.push([module.id, "\n.comp-full-calendar {\n  padding: 20px;\n  background: #fff;\n  max-width: 960px;\n  margin: 0 auto;\n}\n.comp-full-calendar ul, .comp-full-calendar p {\n    margin: 0;\n    padding: 0;\n    font-size: 14px;\n}\n", ""]);
-
+	
 	// exports
 
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -169,7 +160,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// css base code, injected by the css-loader
 	module.exports = function() {
 		var list = [];
-
+	
 		// return the list of modules as css string
 		list.toString = function toString() {
 			var result = [];
@@ -183,7 +174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 			return result.join("");
 		};
-
+	
 		// import a list of modules into the list
 		list.i = function(modules, mediaQuery) {
 			if(typeof modules === "string")
@@ -214,9 +205,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -231,7 +222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			};
 		},
 		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 		}),
 		getHeadElement = memoize(function () {
 			return document.head || document.getElementsByTagName("head")[0];
@@ -239,23 +230,23 @@ return /******/ (function(modules) { // webpackBootstrap
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [];
-
+	
 	module.exports = function(list, options) {
 		if(false) {
 			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
 		}
-
+	
 		options = options || {};
 		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 		// tags it will allow on a page
 		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-
+	
 		// By default, add <style> tags to the bottom of <head>.
 		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-
+	
 		var styles = listToStyles(list);
 		addStylesToDom(styles, options);
-
+	
 		return function update(newList) {
 			var mayRemove = [];
 			for(var i = 0; i < styles.length; i++) {
@@ -278,7 +269,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		};
 	}
-
+	
 	function addStylesToDom(styles, options) {
 		for(var i = 0; i < styles.length; i++) {
 			var item = styles[i];
@@ -300,7 +291,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	}
-
+	
 	function listToStyles(list) {
 		var styles = [];
 		var newStyles = {};
@@ -318,7 +309,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 		return styles;
 	}
-
+	
 	function insertStyleElement(options, styleElement) {
 		var head = getHeadElement();
 		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
@@ -337,7 +328,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
 		}
 	}
-
+	
 	function removeStyleElement(styleElement) {
 		styleElement.parentNode.removeChild(styleElement);
 		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
@@ -345,24 +336,24 @@ return /******/ (function(modules) { // webpackBootstrap
 			styleElementsInsertedAtTop.splice(idx, 1);
 		}
 	}
-
+	
 	function createStyleElement(options) {
 		var styleElement = document.createElement("style");
 		styleElement.type = "text/css";
 		insertStyleElement(options, styleElement);
 		return styleElement;
 	}
-
+	
 	function createLinkElement(options) {
 		var linkElement = document.createElement("link");
 		linkElement.rel = "stylesheet";
 		insertStyleElement(options, linkElement);
 		return linkElement;
 	}
-
+	
 	function addStyle(obj, options) {
 		var styleElement, update, remove;
-
+	
 		if (options.singleton) {
 			var styleIndex = singletonCounter++;
 			styleElement = singletonElement || (singletonElement = createStyleElement(options));
@@ -388,9 +379,9 @@ return /******/ (function(modules) { // webpackBootstrap
 				removeStyleElement(styleElement);
 			};
 		}
-
+	
 		update(obj);
-
+	
 		return function updateStyle(newObj) {
 			if(newObj) {
 				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
@@ -401,19 +392,19 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		};
 	}
-
+	
 	var replaceText = (function () {
 		var textStore = [];
-
+	
 		return function (index, replacement) {
 			textStore[index] = replacement;
 			return textStore.filter(Boolean).join('\n');
 		};
 	})();
-
+	
 	function applyToSingletonTag(styleElement, index, remove, obj) {
 		var css = remove ? "" : obj.css;
-
+	
 		if (styleElement.styleSheet) {
 			styleElement.styleSheet.cssText = replaceText(index, css);
 		} else {
@@ -427,15 +418,15 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	}
-
+	
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-
+	
 		if(media) {
 			styleElement.setAttribute("media", media)
 		}
-
+	
 		if(styleElement.styleSheet) {
 			styleElement.styleSheet.cssText = css;
 		} else {
@@ -445,43 +436,96 @@ return /******/ (function(modules) { // webpackBootstrap
 			styleElement.appendChild(document.createTextNode(css));
 		}
 	}
-
+	
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
 		var sourceMap = obj.sourceMap;
-
+	
 		if(sourceMap) {
 			// http://stackoverflow.com/a/26603875
 			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
 		}
-
+	
 		var blob = new Blob([css], { type: "text/css" });
-
+	
 		var oldSrc = linkElement.href;
-
+	
 		linkElement.href = URL.createObjectURL(blob);
-
+	
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
+
+	module.exports = function normalizeComponent (
+	  rawScriptExports,
+	  compiledTemplate,
+	  scopeId,
+	  cssModules
+	) {
+	  var esModule
+	  var scriptExports = rawScriptExports = rawScriptExports || {}
+	
+	  // ES6 modules interop
+	  var type = typeof rawScriptExports.default
+	  if (type === 'object' || type === 'function') {
+	    esModule = rawScriptExports
+	    scriptExports = rawScriptExports.default
+	  }
+	
+	  // Vue.extend constructor export interop
+	  var options = typeof scriptExports === 'function'
+	    ? scriptExports.options
+	    : scriptExports
+	
+	  // render functions
+	  if (compiledTemplate) {
+	    options.render = compiledTemplate.render
+	    options.staticRenderFns = compiledTemplate.staticRenderFns
+	  }
+	
+	  // scopedId
+	  if (scopeId) {
+	    options._scopeId = scopeId
+	  }
+	
+	  // inject cssModules
+	  if (cssModules) {
+	    var computed = options.computed || (options.computed = {})
+	    Object.keys(cssModules).forEach(function (key) {
+	      var module = cssModules[key]
+	      computed[key] = function () { return module }
+	    })
+	  }
+	
+	  return {
+	    esModule: esModule,
+	    exports: scriptExports,
+	    options: options
+	  }
+	}
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _langSets = __webpack_require__(7);
-
+	
+	var _langSets = __webpack_require__(8);
+	
 	var _langSets2 = _interopRequireDefault(_langSets);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = {
 	  props: {
 	    events: { // events will be displayed on calendar
@@ -498,7 +542,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var res = parseInt(val);
 	        return res >= 0 && res <= 6;
 	      },
-
+	
 	      default: 0
 	    },
 	    titleFormat: {
@@ -526,7 +570,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      currentDate: new Date()
 	    };
 	  },
-
+	
 	  methods: {
 	    emitChangeMonth: function emitChangeMonth(start, end, currentStart, current) {
 	      console.log('currentDate 2', this.currentDate);
@@ -545,8 +589,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  components: {
-	    'fc-body': __webpack_require__(8),
-	    'fc-header': __webpack_require__(14)
+	    'fc-body': __webpack_require__(9),
+	    'fc-header': __webpack_require__(15)
 	  }
 	}; //
 	//
@@ -580,12 +624,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -607,61 +651,52 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-
+	
 	/* styles */
-	__webpack_require__(9)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(11)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(13)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/SunnyWang/code/vue-fullcalendar/src/components/body.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-
+	__webpack_require__(10)
+	
+	var Component = __webpack_require__(6)(
+	  /* script */
+	  __webpack_require__(12),
+	  /* template */
+	  __webpack_require__(14),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+	Component.options.__file = "/Users/zyx/Documents/develop/NODE/vue-fullcalendar/src/components/body.vue"
+	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+	if (Component.options.functional) {console.error("[vue-loader] body.vue: functional components are not supported with templates, they should use render functions.")}
+	
 	/* hot reload */
 	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-734054ba", __vue_options__)
+	    hotAPI.createRecord("data-v-53cf6203", Component.options)
 	  } else {
-	    hotAPI.reload("data-v-734054ba", __vue_options__)
+	    hotAPI.reload("data-v-53cf6203", Component.options)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] body.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = Component.exports
 
-	module.exports = __vue_exports__
 
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-
+	
 	// load the styles
-	var content = __webpack_require__(10);
+	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -670,8 +705,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/style-rewriter.js?id=data-v-734054ba!./../../node_modules/.npminstall/sass-loader/3.2.3/sass-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/selector.js?type=styles&index=0!./body.vue", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/style-rewriter.js?id=data-v-734054ba!./../../node_modules/.npminstall/sass-loader/3.2.3/sass-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/selector.js?type=styles&index=0!./body.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-53cf6203!../../node_modules/sass-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./body.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-53cf6203!../../node_modules/sass-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./body.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -680,36 +715,36 @@ return /******/ (function(modules) { // webpackBootstrap
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
 	// imports
-
-
+	
+	
 	// module
-	exports.push([module.id, "\n.full-calendar-body {\n  margin-top: 20px;\n}\n.full-calendar-body .weeks {\n    display: flex;\n    border-top: 1px solid #e0e0e0;\n    border-bottom: 1px solid #e0e0e0;\n    border-left: 1px solid #e0e0e0;\n}\n.full-calendar-body .weeks .week {\n      flex: 1;\n      text-align: center;\n      border-right: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates {\n    position: relative;\n}\n.full-calendar-body .dates .week-row {\n      border-left: 1px solid #e0e0e0;\n      display: flex;\n}\n.full-calendar-body .dates .week-row .day-cell {\n        flex: 1;\n        min-height: 100px;\n        padding: 4px;\n        border-right: 1px solid #e0e0e0;\n        border-bottom: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates .week-row .day-cell .day-number {\n          text-align: right;\n}\n.full-calendar-body .dates .week-row .day-cell.today {\n          background-color: #fcf8e3;\n}\n.full-calendar-body .dates .week-row .day-cell.not-cur-month .day-number {\n          color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events {\n      position: absolute;\n      top: 0;\n      left: 0;\n      z-index: 1;\n      width: 100%;\n}\n.full-calendar-body .dates .dates-events .events-week {\n        display: flex;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day {\n          cursor: pointer;\n          flex: 1;\n          min-height: 109px;\n          overflow: hidden;\n          text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .day-number {\n            text-align: right;\n            padding: 4px 5px 4px 4px;\n            opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day.not-cur-month .day-number {\n            color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-start {\n              margin-left: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-end {\n              margin-right: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-opacity {\n              opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .more-link {\n            cursor: pointer;\n            padding-left: 8px;\n            padding-right: 2px;\n            color: rgba(0, 0, 0, 0.38);\n            font-size: 14px;\n}\n.full-calendar-body .dates .more-events {\n      position: absolute;\n      width: 150px;\n      z-index: 2;\n      border: 1px solid #eee;\n      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n}\n.full-calendar-body .dates .more-events .more-header {\n        background-color: #eee;\n        padding: 5px;\n        display: flex;\n        align-items: center;\n        font-size: 14px;\n}\n.full-calendar-body .dates .more-events .more-header .title {\n          flex: 1;\n}\n.full-calendar-body .dates .more-events .more-header .close {\n          margin-right: 2px;\n          cursor: pointer;\n          font-size: 16px;\n}\n.full-calendar-body .dates .more-events .more-body {\n        height: 140px;\n        overflow: hidden;\n}\n.full-calendar-body .dates .more-events .more-body .body-list {\n          height: 120px;\n          padding: 5px;\n          overflow: auto;\n          background-color: #fff;\n}\n.full-calendar-body .dates .more-events .more-body .body-list .body-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n", ""]);
-
+	exports.push([module.id, "\n.full-calendar-body {\n  margin-top: 20px;\n}\n.full-calendar-body .weeks {\n    display: flex;\n    border-top: 1px solid #e0e0e0;\n    border-bottom: 1px solid #e0e0e0;\n    border-left: 1px solid #e0e0e0;\n}\n.full-calendar-body .weeks .week {\n      flex: 1;\n      text-align: center;\n      border-right: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates {\n    position: relative;\n}\n.full-calendar-body .dates .week-row {\n      border-left: 1px solid #e0e0e0;\n      display: flex;\n}\n.full-calendar-body .dates .week-row .day-cell {\n        flex: 1;\n        min-height: 100px;\n        padding: 4px;\n        border-right: 1px solid #e0e0e0;\n        border-bottom: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates .week-row .day-cell .day-number {\n          text-align: right;\n}\n.full-calendar-body .dates .week-row .day-cell.today {\n          background-color: #fcf8e3;\n}\n.full-calendar-body .dates .week-row .day-cell.not-cur-month .day-number {\n          color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events {\n      position: absolute;\n      top: 0;\n      left: 0;\n      z-index: 1;\n      width: 100%;\n}\n.full-calendar-body .dates .dates-events .events-week {\n        display: flex;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day {\n          cursor: pointer;\n          flex: 1;\n          overflow: hidden;\n          text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .day-number {\n            text-align: right;\n            padding: 4px 5px 4px 4px;\n            opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day.not-cur-month .day-number {\n            color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-start {\n              margin-left: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-end {\n              margin-right: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-opacity {\n              opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .more-link {\n            cursor: pointer;\n            padding-left: 8px;\n            padding-right: 2px;\n            color: rgba(0, 0, 0, 0.38);\n            font-size: 14px;\n}\n.full-calendar-body .dates .more-events {\n      position: absolute;\n      width: 150px;\n      z-index: 2;\n      border: 1px solid #eee;\n      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n}\n.full-calendar-body .dates .more-events .more-header {\n        background-color: #eee;\n        padding: 5px;\n        display: flex;\n        align-items: center;\n        font-size: 14px;\n}\n.full-calendar-body .dates .more-events .more-header .title {\n          flex: 1;\n}\n.full-calendar-body .dates .more-events .more-header .close {\n          margin-right: 2px;\n          cursor: pointer;\n          font-size: 16px;\n}\n.full-calendar-body .dates .more-events .more-body {\n        height: 140px;\n        overflow: hidden;\n}\n.full-calendar-body .dates .more-events .more-body .body-list {\n          height: 120px;\n          padding: 5px;\n          overflow: auto;\n          background-color: #fff;\n}\n.full-calendar-body .dates .more-events .more-body .body-list .body-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n", ""]);
+	
 	// exports
 
 
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _dateFunc = __webpack_require__(12);
-
+	
+	var _dateFunc = __webpack_require__(13);
+	
 	var _dateFunc2 = _interopRequireDefault(_dateFunc);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = {
 	  props: {
 	    currentDate: {},
@@ -743,7 +778,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      selectDay: {}
 	    };
 	  },
-
+	
 	  watch: {
 	    weekNames: function weekNames(val) {
 	      console.log('watch weekNames', val);
@@ -757,7 +792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  methods: {
 	    isBegin: function isBegin(event, date, index) {
 	      var st = new Date(event.start);
-
+	
 	      if (index == 0 || st.toDateString() == date.toDateString()) {
 	        return event.title;
 	      }
@@ -771,10 +806,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (!cssClass) return '';
 	      // string  
 	      if (typeof cssClass == 'string') return cssClass;
-
+	
 	      // Array
 	      if (Array.isArray(cssClass)) return cssClass.join(' ');
-
+	
 	      // else
 	      return '';
 	    },
@@ -783,22 +818,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // first day of this month
 	      var now = new Date(); // today
 	      var current = new Date(this.currentDate);
-
+	
 	      var startDate = _dateFunc2.default.getStartDate(current); // 1st day of this month
-
+	
 	      var curWeekDay = startDate.getDay();
-
+	
 	      // begin date of this table may be some day of last month
 	      var diff = parseInt(this.firstDay) - curWeekDay;
 	      diff = diff > 0 ? diff - 7 : diff;
-
+	
 	      startDate.setDate(startDate.getDate() + diff);
 	      var calendar = [];
-
+	
 	      for (var perWeek = 0; perWeek < 6; perWeek++) {
-
+	
 	        var week = [];
-
+	
 	        for (var perDay = 0; perDay < 7; perDay++) {
 	          week.push({
 	            monthDay: startDate.getDate(),
@@ -808,7 +843,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            date: new Date(startDate),
 	            events: this.slotEvents(startDate)
 	          });
-
+	
 	          startDate.setDate(startDate.getDate() + 1);
 	          // if (startDate.toDateString() == endDate.toDateString()) {
 	          //   isFinal = true
@@ -821,7 +856,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return calendar;
 	    },
 	    slotEvents: function slotEvents(date) {
-
+	
 	      // find all events start from this date
 	      var cellIndexArr = [];
 	      var thisDayEvents = this.events.filter(function (day) {
@@ -831,14 +866,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // console.log('slotEvt', st, ed, date)
 	        return date >= st && date <= ed;
 	      });
-
+	
 	      // sort by duration
 	      thisDayEvents.sort(function (a, b) {
 	        if (!a.cellIndex) return 1;
 	        if (!b.cellIndex) return -1;
 	        return a.cellIndex - b.cellIndex;
 	      });
-
+	
 	      // mark cellIndex and place holder
 	      for (var i = 0; i < thisDayEvents.length; i++) {
 	        thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || i + 1;
@@ -852,7 +887,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          isShow: false
 	        });
 	      }
-
+	
 	      return thisDayEvents;
 	    },
 	    isStart: function isStart(eventDate, date) {
@@ -961,15 +996,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
 
 	'use strict';
-
+	
 	var shortMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	var defMonthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
+	
 	var dateFunc = {
 	    getDuration: function getDuration(date) {
 	        // how many days of this month
@@ -999,7 +1034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else {
 	            date = new Date(date);
 	        }
-
+	
 	        var map = {
 	            'M': date.getMonth() + 1,
 	            'd': date.getDate(),
@@ -1009,7 +1044,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'q': Math.floor((date.getMonth() + 3) / 3),
 	            'S': date.getMilliseconds()
 	        };
-
+	
 	        _format = _format.replace(/([yMdhmsqS])+/g, function (all, t) {
 	            var v = map[t];
 	            if (v !== undefined) {
@@ -1032,14 +1067,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _format;
 	    }
 	};
-
+	
 	module.exports = dateFunc;
 
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "full-calendar-body"
 	  }, [_c('div', {
@@ -1048,7 +1083,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _c('strong', {
 	      staticClass: "week"
 	    }, [_vm._v(_vm._s(week))])
-	  })), _vm._v(" "), _c('div', {
+	  }), 0), _vm._v(" "), _c('div', {
 	    ref: "dates",
 	    staticClass: "dates"
 	  }, [_c('div', {
@@ -1066,8 +1101,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }, [_c('p', {
 	        staticClass: "day-number"
 	      }, [_vm._v(_vm._s(day.monthDay))])])
-	    }))
-	  })), _vm._v(" "), _c('div', {
+	    }), 0)
+	  }), 0), _vm._v(" "), _c('div', {
 	    staticClass: "dates-events"
 	  }, _vm._l((_vm.currentDates), function(week) {
 	    return _c('div', {
@@ -1085,7 +1120,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        on: {
 	          "click": function($event) {
 	            $event.stopPropagation();
-	            _vm.dayClick(day.date, $event)
+	            return _vm.dayClick(day.date, $event)
 	          }
 	        }
 	      }, [_c('p', {
@@ -1108,7 +1143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }],
 	          on: {
 	            "click": function($event) {
-	              _vm.eventClick(event, $event)
+	              return _vm.eventClick(event, $event)
 	            }
 	          }
 	        }, [_vm._v("\n              " + _vm._s(_vm.isBegin(event, day.date, day.weekDay)) + "\n            ")])
@@ -1117,12 +1152,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        on: {
 	          "click": function($event) {
 	            $event.stopPropagation();
-	            _vm.selectThisDay(day, $event)
+	            return _vm.selectThisDay(day, $event)
 	          }
 	        }
 	      }, [_vm._v("\n              + " + _vm._s(day.events[day.events.length - 1].cellIndex - _vm.eventLimit) + " more\n            ")]) : _vm._e()], 2)])
-	    }))
-	  })), _vm._v(" "), _c('div', {
+	    }), 0)
+	  }), 0), _vm._v(" "), _c('div', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -1161,75 +1196,66 @@ return /******/ (function(modules) { // webpackBootstrap
 	      staticClass: "body-item",
 	      on: {
 	        "click": function($event) {
-	          _vm.eventClick(event, $event)
+	          return _vm.eventClick(event, $event)
 	        }
 	      }
 	    }, [_vm._v("\n            " + _vm._s(event.title) + "\n          ")])
-	  }))])]), _vm._v(" "), _vm._t("body-card")], 2)])
+	  }), 0)])]), _vm._v(" "), _vm._t("body-card")], 2)])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-734054ba", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-53cf6203", module.exports)
 	  }
 	}
 
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-
+	
 	/* styles */
-	__webpack_require__(15)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(17)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(18)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/SunnyWang/code/vue-fullcalendar/src/components/header.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-
+	__webpack_require__(16)
+	
+	var Component = __webpack_require__(6)(
+	  /* script */
+	  __webpack_require__(18),
+	  /* template */
+	  __webpack_require__(19),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+	Component.options.__file = "/Users/zyx/Documents/develop/NODE/vue-fullcalendar/src/components/header.vue"
+	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
+	
 	/* hot reload */
 	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-62863025", __vue_options__)
+	    hotAPI.createRecord("data-v-5b870f2e", Component.options)
 	  } else {
-	    hotAPI.reload("data-v-62863025", __vue_options__)
+	    hotAPI.reload("data-v-5b870f2e", Component.options)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] header.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = Component.exports
 
-	module.exports = __vue_exports__
 
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-
+	
 	// load the styles
-	var content = __webpack_require__(16);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1238,8 +1264,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/style-rewriter.js?id=data-v-62863025!./../../node_modules/.npminstall/sass-loader/3.2.3/sass-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/style-rewriter.js?id=data-v-62863025!./../../node_modules/.npminstall/sass-loader/3.2.3/sass-loader/index.js!./../../node_modules/.npminstall/vue-loader/10.0.2/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5b870f2e!../../node_modules/sass-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5b870f2e!../../node_modules/sass-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -1248,41 +1274,41 @@ return /******/ (function(modules) { // webpackBootstrap
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
 	// imports
-
-
+	
+	
 	// module
 	exports.push([module.id, "\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n", ""]);
-
+	
 	// exports
 
 
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _dateFunc = __webpack_require__(12);
-
+	
+	var _dateFunc = __webpack_require__(13);
+	
 	var _dateFunc2 = _interopRequireDefault(_dateFunc);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = {
 	  created: function created() {
 	    this.dispatchEvent();
 	  },
-
+	
 	  props: {
 	    currentDate: {},
 	    titleFormat: {},
@@ -1297,7 +1323,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      headDate: new Date()
 	    };
 	  },
-
+	
 	  watch: {
 	    currentDate: function currentDate(val) {
 	      if (!val) return;
@@ -1321,21 +1347,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    dispatchEvent: function dispatchEvent() {
 	      this.title = _dateFunc2.default.format(this.headDate, this.titleFormat, this.monthNames);
-
+	
 	      var startDate = _dateFunc2.default.getStartDate(this.headDate);
 	      var curWeekDay = startDate.getDay();
-
+	
 	      // 1st day of this monthView
 	      var diff = parseInt(this.firstDay) - curWeekDay;
 	      if (diff) diff -= 7;
 	      startDate.setDate(startDate.getDate() + diff);
-
+	
 	      // the month view is 6*7
 	      var endDate = _dateFunc2.default.changeDay(startDate, 41);
-
+	
 	      // 1st day of current month
 	      var currentDate = _dateFunc2.default.getStartDate(this.headDate);
-
+	
 	      this.$emit('change', _dateFunc2.default.format(startDate, 'yyyy-MM-dd'), _dateFunc2.default.format(endDate, 'yyyy-MM-dd'), _dateFunc2.default.format(currentDate, 'yyyy-MM-dd'), this.headDate);
 	    }
 	  }
@@ -1357,11 +1383,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "full-calendar-header"
 	  }, [_c('div', {
@@ -1373,7 +1399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": function($event) {
 	        $event.stopPropagation();
-	        _vm.goPrev($event)
+	        return _vm.goPrev($event)
 	      }
 	    }
 	  }, [_vm._v(_vm._s(_vm.leftArrow))]), _vm._v(" "), _c('span', {
@@ -1383,7 +1409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": function($event) {
 	        $event.stopPropagation();
-	        _vm.goNext($event)
+	        return _vm.goNext($event)
 	      }
 	    }
 	  }, [_vm._v(_vm._s(_vm.rightArrow))])]), _vm._v(" "), _c('div', {
@@ -1394,15 +1420,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-62863025", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-5b870f2e", module.exports)
 	  }
 	}
 
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "comp-full-calendar"
 	  }, [_c('fc-header', {
@@ -1416,8 +1442,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "change": _vm.emitChangeMonth
 	    }
 	  }, [_c('div', {
+	    attrs: {
+	      "slot": "header-left"
+	    },
 	    slot: "header-left"
 	  }, [_vm._t("fc-header-left")], 2), _vm._v(" "), _c('div', {
+	    attrs: {
+	      "slot": "header-right"
+	    },
 	    slot: "header-right"
 	  }, [_vm._t("fc-header-right")], 2)]), _vm._v(" "), _c('fc-body', {
 	    attrs: {
@@ -1433,6 +1465,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "moreclick": _vm.emitMoreClick
 	    }
 	  }, [_c('div', {
+	    attrs: {
+	      "slot": "body-card"
+	    },
 	    slot: "body-card"
 	  }, [_vm._t("fc-body-card")], 2)])], 1)
 	},staticRenderFns: []}
@@ -1440,11 +1475,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-3e333dbe", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-0de35d15", module.exports)
 	  }
 	}
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;
+//# sourceMappingURL=vue-fullcalendar.js.map
