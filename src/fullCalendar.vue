@@ -104,7 +104,6 @@
     // font-family: "elvetica neue", tahoma, "hiragino sans gb";
     padding:20px;
     background: #fff;
-    max-width: 960px;
     margin:0 auto;
     ul,p{
       margin:0;
